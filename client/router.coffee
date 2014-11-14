@@ -10,10 +10,10 @@ router.route '/',
   view: adminView
   el: 'content'
 
-#router.route '/:id',
-#  title: 'ID'
-#  view: accountView
-#  el: 'content'
+router.route '/:id',
+  title: 'ID'
+  view: accountView
+  el: 'content'
 
 router.route '*',
   title: 'ERROR'
