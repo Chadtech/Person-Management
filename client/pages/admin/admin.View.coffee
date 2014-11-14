@@ -104,9 +104,9 @@ personView = fission.modelView
           onClick:   @editHandle
           value:     editPrompts[@state.editState]
 
-      div {className: 'column'},
-        p {className: 'point'},
-          @model.get('id')
+      #div {className: 'column'},
+      #  p {className: 'point'},
+      #    @model.get('id')
 
 module.exports =
   fission.collectionView

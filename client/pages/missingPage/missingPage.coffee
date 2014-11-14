@@ -1,1 +1,0 @@
-fission = require '../../app'
