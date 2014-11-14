@@ -38,6 +38,8 @@ personView = fission.modelView
   editHandle: ->
     if @state.editState is 'edit'
       @setState editState: 'save'
+      @setState firstNameValue: @model.get('name').first
+      @setState lastNameValue: @model.get('name').last
     else if @state.editState is 'save'
       @model.set 'name', 
         first: @state.firstNameValue

@@ -26,7 +26,6 @@ body {
   content: '';
   display: table;
   clear: both;
-  height: 1em;
 }
 .column {
   float: left;
@@ -79,7 +78,7 @@ body {
   margin-right: 1em;
   padding-left: 0em;
   padding-right: 0em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   font-smooth: never;
   -webkit-font-smoothing: none;
   font-family: CtCommandPrompt;
@@ -98,6 +97,7 @@ body {
   color: #000;
 }
 .input.hidden {
+  padding: 0em;
   margin-bottom: 0em;
   color: #000;
   background: #000;
