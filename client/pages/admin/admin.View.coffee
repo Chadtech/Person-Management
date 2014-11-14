@@ -104,6 +104,10 @@ personView = fission.modelView
           onClick:   @editHandle
           value:     editPrompts[@state.editState]
 
+      div {className: 'column'},
+        p {className: 'point'},
+          @model.get('id')
+
 module.exports =
   fission.collectionView
     model:Person
@@ -130,27 +134,37 @@ module.exports =
         div {className: 'spacer'}
         div {className: 'indent'},
           div {className: 'container'},
+            
             div {className: 'row'},
+              
               div {className: 'column super'},
                 p {className:'point'}, 'Person Management Admin Panel'
+            
             div {className:'row'},
               div {className:'column'}
+            
             div {className: 'row'},
+              
               div {className: 'column'},
                 form {className: 'formTitle'},
                   'first name'
                   input {id:'firstNameField', className: 'input'}
+              
               div {className: 'column'},
                 form {className: 'formTitle'},
                   'last name'
                   input {id:'lastNameField', className: 'input'}
+              
               div {className: 'column'},
                 form {className: 'formTitle'},
                   'status'
                   canvas {id:'aliveStatus', className:'alive', onClick:@toggleAlive}
+              
               div {className: 'column'},
                 input {className:'submit add', type:'submit', value:@submitValues[@addOrEdit], onClick:@addPerson} 
+            
             div {className:'row'},
               div {className:'column'}
+            
             @items.map (item) ->
               item
