@@ -26,6 +26,7 @@ body {
   content: '';
   display: table;
   clear: both;
+  min-height: 1em;
 }
 .column {
   float: left;
