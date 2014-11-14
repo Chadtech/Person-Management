@@ -42,8 +42,8 @@ personView = fission.modelView
       @setState lastNameValue: @model.get('name').last
     else if @state.editState is 'save'
       @model.set 'name', 
-        first: @state.firstNameValue
-        last: @state.lastNameValue
+        first:   @state.firstNameValue
+        last:    @state.lastNameValue
       @model.save()
       @setState editState: 'edit'
       @setState firstNameValue: ''
@@ -123,6 +123,8 @@ module.exports =
       firstName = document.getElementById('firstNameField').value
       lastName = document.getElementById('lastNameField').value
       @collection.create name:{first:firstName, last:lastName}, alive:@alive
+      document.getElementById('firstNameField').value = ''
+      document.getElementById('lastNameField').value = ''
     render: ->
       div {className: 'content'},
         div {className: 'spacer'}
