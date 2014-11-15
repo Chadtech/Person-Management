@@ -10,7 +10,7 @@ router.route '/',
   view: adminView
   el: 'content'
 
-router.route '/:id',
+router.route '/person/:id',
   title: 'ID'
   view: accountView
   el: 'content'
